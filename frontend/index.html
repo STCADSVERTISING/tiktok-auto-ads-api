@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacker Mode: TikTok Auto Ads</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #33ff33;
+      font-family: 'Courier New', monospace;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #33ff33;
+      text-shadow: 0 0 5px #00ff00;
+    }
+    section {
+      background: rgba(0, 255, 0, 0.05);
+      border: 1px solid #33ff33;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px #00ff00;
+    }
+    input, button, textarea {
+      background-color: black;
+      color: #33ff33;
+      border: 1px solid #33ff33;
+      font-family: monospace;
+      padding: 0.5rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    button:hover {
+      background-color: #006600;
+    }
+    .terminal-effect {
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🛡️ TikTok Auto Ads - Hacker Edition</h1>
+
+  <section>
+    <h2>1. เข้าระบบ TikTok</h2>
+    <button onclick="alert('ยังไม่มี Access Token จริง (mock login)')">🔐 เข้าระบบ</button>
+  </section>
+
+  <section>
+    <h2>2. อัปโหลดวิดีโอ หรือ ใส่ลิงก์</h2>
+    <input type="file" accept="video/*" />
+    <input type="text" placeholder="https://www.tiktok.com/..." />
+  </section>
+
+  <section>
+    <h2>3. วิเคราะห์กลุ่มเป้าหมาย (AI)</h2>
+    <textarea placeholder="ใส่ keyword หรือคำอธิบายคลิป..."></textarea>
+    <button onclick="alert('ผลลัพธ์ mock: เพศหญิง 18-24 สนใจความงาม')">⚙️ วิเคราะห์</button>
+  </section>
+
+  <section>
+    <h2>4. ยิงแอด TikTok</h2>
+    <input type="text" placeholder="ใส่ Pixel ID..." value="YOUR_PIXEL_ID"/>
+    <button onclick="alert('ยิงแอดเรียบร้อย (mock)')">🚀 ยิงแอด</button>
+    <button onclick="launchMulti()">🎯 ยิงแอดทุกบัญชีพร้อมกัน</button>
+  </section>
+
+  <script>
+    function launchMulti() {
+      fetch('http://localhost:5000/api/launch_multi_ads', {
+        method: 'POST'
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert('ยิงแอดทุกแอคสำเร็จ:\n' + data.map(r => r.brand + ': ' + r.status).join('\n'));
+      });
+    }
+  </script>
+</body>
+</html>
