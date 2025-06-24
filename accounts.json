@@ -1,0 +1,14 @@
+[
+  {
+    "name": "แบรนด์ A",
+    "access_token": "access_token_A",
+    "pixel_id": "PIXEL_A",
+    "ad_account_id": "ad_account_A"
+  },
+  {
+    "name": "แบรนด์ B",
+    "access_token": "access_token_B",
+    "pixel_id": "PIXEL_B",
+    "ad_account_id": "ad_account_B"
+  }
+]
